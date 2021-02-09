@@ -1,19 +1,15 @@
 package com.example.chucknorris.ui.home
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
-import com.example.chucknorris.R
 import com.example.chucknorris.databinding.HomeFragmentBinding
 import com.example.chucknorris.ui.home.adapter.HomeAdapter
 import com.example.chucknorris.util.safeNavigate
-import kotlinx.android.synthetic.main.home_fragment.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class HomeFragment : Fragment() {
@@ -48,8 +44,9 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initView()
-        initObservers()
         mViewModel.get()
+        initObservers()
+
     }
 
     private fun initView() {
@@ -57,11 +54,9 @@ class HomeFragment : Fragment() {
     }
 
     private fun initObservers() {
-
         mViewModel.listCategories.observe(viewLifecycleOwner, Observer {
             homeAdapter.submitList(it)
         })
-
     }
 
 

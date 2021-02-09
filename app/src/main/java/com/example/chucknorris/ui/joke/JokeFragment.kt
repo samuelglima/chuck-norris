@@ -60,7 +60,7 @@ class JokeFragment : Fragment() {
                     binding.tvMessage.text = it.value
                     binding.tvMessage.visibility = View.VISIBLE
                 } else {
-                    binding.tvMessage.text = "Falha ao carregar a mensagem, tente novamente."
+                    binding.tvMessage.text = "The server was slow to respond. Try again later."
                 }
             }
         })
