@@ -1,7 +1,7 @@
 # Chuck-norris
 
 <h4 align="center"> 
-	🚧  React Select 🚀 Em construção...  🚧
+	🚧 🚀 Under construction...  🚧
 </h4>
 
 An example Chuck Norris Android application that consumes a REST API (https://api.chucknorris.io/). It is a very simple app that uses the following technologies:
